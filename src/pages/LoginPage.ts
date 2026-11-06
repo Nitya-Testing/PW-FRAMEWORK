@@ -28,6 +28,9 @@ export class LoginPage extends BasePage{
     async isForgotPwdLinkExists():Promise<boolean>{
         return this.forgotPasswordLink.isVisible();
     }
+    async isLogoExisits():Promise<boolean>{
+        return this.logo.isVisible();
+    }
     async doLogin(userName:string,password:string):Promise<void>{
         console.log(`Login with username: ${userName} and password: ${password}`);
         await this.emailid.fill(userName);
