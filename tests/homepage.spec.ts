@@ -9,7 +9,7 @@ test.beforeEach(async ({page})=>{
     loginPage = new LoginPage(page);
     homePage = new HomePage(page);
     await loginPage.goToLoginPage();
-    await loginPage.doLogin("nityaranjan190592@gmail.com","Selenium@123");
+    await loginPage.doLogin(process.env.USER_NAME!,process.env.PASSWORD!);
 })
 
 test("Home Page Title Test", async()=>{

@@ -1,5 +1,10 @@
 import { defineConfig, devices } from '@playwright/test';
 import * as os from 'node:os';
+import dotenv from "dotenv";
+
+const ENV = process.env.ENV || "qa";
+console.log(`Testcases are Running On Environment - ${ENV}`);
+dotenv.config({path: `config/.env.${ENV}`});
 
 export default defineConfig({
   testDir: './tests',
@@ -25,7 +30,7 @@ export default defineConfig({
 
 
   use: {
-    baseURL: 'https://naveenautomationlabs.com/',
+    baseURL: process.env.BASEURL,
     screenshot:'only-on-failure',
     video:'retain-on-failure',
     trace: 'on-first-retry',
