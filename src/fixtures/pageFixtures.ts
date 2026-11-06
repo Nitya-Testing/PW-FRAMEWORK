@@ -1,11 +1,13 @@
 import {test as baseTest} from "@playwright/test";
 import {LoginPage} from '../pages/LoginPage';
 import {HomePage} from '../pages/HomePage';
+import { CsvHelper } from "../../utils/CsvHelper";
 
 
 type pageFixtures = {
     loginPage:LoginPage,
     homePage:HomePage
+    testData: Record<string, string>[]
 }
 
 export let test = baseTest.extend<pageFixtures>({
@@ -17,6 +19,11 @@ export let test = baseTest.extend<pageFixtures>({
     homePage: async({page},use)=>{
         let homePage = new HomePage(page);
         await use(homePage);
+    },
+
+    testData: async({},use)=>{
+        let testData = CsvHelper.readCsv('./src/data/loginData.csv');
+        await use(testData);
     }
 })
 

@@ -8,6 +8,7 @@ export class LoginPage extends BasePage{
     private readonly loginButton:Locator;
     private readonly forgotPasswordLink:Locator;
     private readonly logo:Locator;
+    private readonly errorMessage:Locator;
 
     constructor(page:Page){
         super(page);
@@ -16,6 +17,7 @@ export class LoginPage extends BasePage{
         this.loginButton = page.getByRole('button', { name: 'Login' });
         this.forgotPasswordLink = page.getByRole('link', { name: 'Forgotten Password' }).first();
         this.logo = page.getByRole('img', { name: 'naveenopencart' });
+        this.errorMessage = page.locator('.alert-danger');
     }
 
 
@@ -23,19 +25,22 @@ export class LoginPage extends BasePage{
         await this.page.goto('opencart/index.php?route=account/login');
     }
     async getLoginPageTitle():Promise<string>{
-        return this.page.title();
+        return await this.page.title();
     }
     async isForgotPwdLinkExists():Promise<boolean>{
-        return this.forgotPasswordLink.isVisible();
+        return await this.forgotPasswordLink.isVisible();
     }
     async isLogoExisits():Promise<boolean>{
-        return this.logo.isVisible();
+        return await this.logo.isVisible();
     }
     async doLogin(userName:string,password:string):Promise<void>{
         console.log(`Login with username: ${userName} and password: ${password}`);
         await this.emailid.fill(userName);
         await this.password.fill(password);
         await this.loginButton.click();
+    }
+    async isErrorMessageDisplayed():Promise<boolean>{
+        return await this.errorMessage.isVisible();
     }
 
 }
