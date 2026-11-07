@@ -1,4 +1,4 @@
-import { test,  expect } from "../src/fixtures/pageFixtures";
+import { test,  expect } from "../fixtures/pageFixtures";
 import { CsvHelper } from "../utils/CsvHelper";
 
 test.beforeEach(async ({loginPage})=>{

@@ -1,7 +1,7 @@
 import {test as baseTest} from "@playwright/test";
 import {LoginPage} from '../pages/LoginPage';
 import {HomePage} from '../pages/HomePage';
-import { CsvHelper } from "../../utils/CsvHelper";
+import { CsvHelper } from "../utils/CsvHelper";
 
 
 type pageFixtures = {
