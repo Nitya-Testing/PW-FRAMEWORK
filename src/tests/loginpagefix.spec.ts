@@ -1,5 +1,7 @@
 import { test,  expect } from "../fixtures/pageFixtures";
 import { CsvHelper } from "../utils/CsvHelper";
+import { ExcelHelper } from "../utils/ExcelHelper";
+import { JsonHelper } from "../utils/JsonHelper";
 
 test.beforeEach(async ({loginPage})=>{
     await loginPage.goToLoginPage();
@@ -31,10 +33,28 @@ test("Login with wrong credentials with data driven approach", async({loginPage,
     }
 })
 
-//DD-2 Recommanded:  without fixtures: Parallel mode 
-let testData = CsvHelper.readCsv('./src/data/loginData.csv');
+//DD-2 Recommanded:  without fixtures with csv file: Parallel mode 
+let testData = CsvHelper.readCsv('src/data/loginData.csv');
 for(let row of testData){
     test(`Invalid Login Test with -  ${row.username} - ${row.password}`, async ({loginPage})=>{
+        await loginPage.doLogin(row.username!,row.password!);
+        expect(await loginPage.isErrorMessageDisplayed()).toBeTruthy();
+    })
+}
+
+//DD-3 without fixtures, with Excel file: Parallel mode 
+let excelTestData = ExcelHelper.readExcel('src/data/OpenCartTestData.xlsx');
+for(let row of excelTestData){
+    test(`Invalid Login Test from Excel data -  ${row.username} - ${row.password}`, async ({loginPage})=>{
+        await loginPage.doLogin(row.username!,row.password!);
+        expect(await loginPage.isErrorMessageDisplayed()).toBeTruthy();
+    })
+}
+
+//DD-4 without fixtures, with json file: Parallel mode 
+let jsonTestData = JsonHelper.readJson('src/data/invaliddata.json')
+for(let row of jsonTestData){
+    test(`Invalid Login :  ${row.username} - ${row.password}`, async ({loginPage})=>{
         await loginPage.doLogin(row.username!,row.password!);
         expect(await loginPage.isErrorMessageDisplayed()).toBeTruthy();
     })
