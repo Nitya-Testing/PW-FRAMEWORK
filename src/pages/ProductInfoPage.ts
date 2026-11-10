@@ -6,7 +6,7 @@ export class ProductInfoPage extends BasePage{
     private readonly productImages:Locator;
     private readonly productMetaData:Locator;
     private readonly productPrice:Locator;
-    map:Map<string,string | number>;
+    private readonly map:Map<string,string | number>;
 
     constructor(page:Page){
         super(page);
