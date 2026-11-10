@@ -3,16 +3,25 @@ import {LoginPage} from '../pages/LoginPage';
 import {HomePage} from '../pages/HomePage';
 import { CsvHelper } from "../utils/CsvHelper";
 import { SearchResultsPage } from "../pages/SearchResultsPage";
+import { ProductInfoPage } from "../pages/ProductInfoPage";
+import { BasePage } from "../pages/BasePage";
 
 
 type pageFixtures = {
+    basePage:BasePage,
     loginPage:LoginPage,
     homePage:HomePage,
     searchResultsPage:SearchResultsPage,
+    productInfoPage:ProductInfoPage,
     testData: Record<string, string>[]
 }
 
 export let test = baseTest.extend<pageFixtures>({
+     basePage: async ({page},use)=>{
+        let basePage = new BasePage(page);
+        await use(basePage);
+    },
+
     loginPage: async ({page},use)=>{
         let loginPage = new LoginPage(page);
         await use(loginPage);
@@ -26,6 +35,10 @@ export let test = baseTest.extend<pageFixtures>({
      searchResultsPage: async({page},use)=>{
         let searchResultsPage = new SearchResultsPage(page);
         await use(searchResultsPage);
+    },
+     productInfoPage: async({page},use)=>{
+        let productInfoPage = new ProductInfoPage(page);
+        await use(productInfoPage);
     },
 
     testData: async({},use)=>{
