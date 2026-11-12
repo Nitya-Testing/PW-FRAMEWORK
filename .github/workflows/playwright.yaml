@@ -12,10 +12,10 @@ on:
       environment:
         description: 'Select environment'
         required: true
-        default: 'QA'
+        default: 'qa'
         type: choice
         options:
-          - QA
+          - qa
           - stage
           - dev
 
@@ -23,7 +23,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     timeout-minutes: 15
-    environment: ${{ github.event.inputs.environment || 'QA' }}
+    environment: ${{ github.event.inputs.environment || 'qa' }}
 
     steps:
       - name: Checkout code
@@ -59,13 +59,13 @@ jobs:
         uses: actions/cache@v4
         with:
           path: reporting-labs.history.json
-          key: reporting-labs-history-${{ github.event.inputs.environment || 'QA' }}-${{ github.run_id }}
-          restore-keys: reporting-labs-history-${{ github.event.inputs.environment || 'QA' }}-
+          key: reporting-labs-history-${{ github.event.inputs.environment || 'qa' }}-${{ github.run_id }}
+          restore-keys: reporting-labs-history-${{ github.event.inputs.environment || 'qa' }}-
 
       - name: Run tests
         run: npx playwright test --project=chromium
         env:
-          ENV: ${{ github.event.inputs.environment || 'QA' }}
+          ENV: ${{ github.event.inputs.environment || 'qa' }}
           BASE_URL: ${{ secrets.BASEURL }}
           USERNAME: ${{ secrets.USER_NAME }}
           PASSWORD: ${{ secrets.PASSWORD }}
