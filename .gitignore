@@ -7,3 +7,8 @@ node_modules/
 /playwright/.cache/
 /playwright/.auth/
 /reports
+
+/config/.env.*
+!/config/.env.example
+
+/allure-results
