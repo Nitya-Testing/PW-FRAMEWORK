@@ -75,6 +75,30 @@ jobs:
           # OAUTH_CLIENT_SECRET: ${{ secrets.OAUTH_CLIENT_SECRET }}
           # GRANT_TYPE: ${{ secrets.GRANT_TYPE }}
 
+      - name: Add test results to run summary
+        if: always()
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+
+          const reportPath = 'reports/playwright-results.json';
+          const summaryPath = process.env.GITHUB_STEP_SUMMARY;
+
+          if (!fs.existsSync(reportPath)) {
+            fs.appendFileSync(summaryPath, '## Playwright test results\n\nNo test report was generated; the test run may have failed before Playwright completed.\n');
+            process.exit(0);
+          }
+
+          const { stats } = JSON.parse(fs.readFileSync(reportPath, 'utf8'));
+          const passed = stats.expected + stats.flaky;
+          const total = passed + stats.unexpected + stats.skipped;
+
+          fs.appendFileSync(
+            summaryPath,
+            `## Playwright test results\n\n| Result | Count |\n| --- | ---: |\n| Passed${stats.flaky ? ' (includes flaky)' : ''} | ${passed} |\n| Failed | ${stats.unexpected} |\n| Skipped | ${stats.skipped} |\n| Total | ${total} |\n\nFlaky tests: ${stats.flaky}\n`
+          );
+          NODE
+
       - name: Upload HTML Report
         if: always()
         uses: actions/upload-artifact@v4

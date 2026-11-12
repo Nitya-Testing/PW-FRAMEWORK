@@ -14,6 +14,7 @@ export default defineConfig({
   ...(process.env.CI ? { workers: '50%' } : {}),
   reporter: [
     ["list"],
+    ["json", { outputFile: "reports/playwright-results.json" }],
     ["html" , {outputFolder: "reports/html-report" , open:"never"}],
     ["allure-playwright", {
         resultsDir: 'allure-results',
