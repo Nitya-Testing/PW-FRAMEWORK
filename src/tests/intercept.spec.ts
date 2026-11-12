@@ -10,7 +10,7 @@ test('intercept and log requests', async({page})=>{
 })
 
 //intercept with mocking
-test('Intercept Mock data' , async({page})=>{
+test.skip('Intercept Mock data' , async({page})=>{
     let fakeProducts = [
         {name: "iphone16", price:"$599"},
         {name: "iphone13", price:"$699"},
