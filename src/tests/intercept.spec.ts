@@ -25,7 +25,6 @@ test('Intercept Mock data' , async({page})=>{
     })
 
     page.goto("https://naveenautomationlabs.com/opencart/index.php?route=account/account");
-    await page.pause();
     let response = await page.evaluate(async()=>{
        let res =  await fetch("https://naveenautomationlabs.com/opencart/index.php?route=account/account");
        return await res.json();
