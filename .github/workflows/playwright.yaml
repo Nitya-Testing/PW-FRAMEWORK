@@ -12,7 +12,7 @@ on:
       environment:
         description: 'Select environment'
         required: true
-        default: 'qa'
+        default: 'QA'
         type: choice
         options:
           - QA
