@@ -1,0 +1,2 @@
+Login with username: nityaranjan190592@gmail.com and password: Selenium@123
+Products count is 3

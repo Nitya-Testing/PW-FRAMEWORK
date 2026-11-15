@@ -1,0 +1,5 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","869","@smoke Verify POST call","chromium","2026-11-15","passed","2026-11-15","Running User APIs","api/users.api.sep.spec.ts","",""
+"","331","@smoke Verify PUT call","chromium","2026-11-15","passed","2026-11-15","Running User APIs","api/users.api.sep.spec.ts","",""
+"","873","@smoke Verify DELETE call","chromium","2026-11-15","passed","2026-11-15","Running User APIs","api/users.api.sep.spec.ts","",""
+"","923","@smoke Verify GET call","chromium","2026-11-15","passed","2026-11-15","Running User APIs","api/users.api.sep.spec.ts","",""
