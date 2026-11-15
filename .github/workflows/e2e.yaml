@@ -508,7 +508,7 @@ jobs:
             echo "overall=✅ ALL PASSED" >> $GITHUB_OUTPUT
           fi
 
-          REPORT_BASE="https://github.com/Nitya-Testing/PW-FRAMEWORK/runs/${{ github.run_id }}"
+          REPORT_BASE="https://nitya-testing.github.io/PW-FRAMEWORK/runs/${{ github.run_id }}"
           echo "report_url=${REPORT_BASE}" >> $GITHUB_OUTPUT
 
       - name: Download All Reports
