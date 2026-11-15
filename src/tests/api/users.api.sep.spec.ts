@@ -8,13 +8,13 @@ let userID:number;
 
 test.describe.serial('Running User APIs', ()=>{
 
-test('Verify GET call',async ({apiHelper})=>{
+test('@smoke Verify GET call',async ({apiHelper})=>{
     let response = await apiHelper.get('/public/v2/users',AUTH_HEADER);
     expect(response.status).toBe(200);
     expect(response.body.length).toBeGreaterThan(0);
 })
 
-test('Verify POST call' , async ({apiHelper})=>{
+test('@smoke Verify POST call' , async ({apiHelper})=>{
     let user = {
     name: "Alexa",
     email: `alexa${Date.now()}@mailinator.com`,
@@ -32,7 +32,7 @@ test('Verify POST call' , async ({apiHelper})=>{
     expect(response.body.name).toBe(user.name);
 })
 
-test('Verify PUT call', async ({apiHelper})=>{
+test('@smoke Verify PUT call', async ({apiHelper})=>{
     //Update a User
      let updatedUser = {
     name: "Alexaaaaaaaa",
@@ -48,7 +48,7 @@ test('Verify PUT call', async ({apiHelper})=>{
     expect(updateUserResponse.body.status).toBe(updatedUser.status);
 })
 
-test('Verify DELETE call', async({apiHelper})=>{
+test('@smoke Verify DELETE call', async({apiHelper})=>{
     let response = await apiHelper.delete(`/public/v2/users/${userID}`,AUTH_HEADER);
     expect(response.status).toBe(204);
 })
