@@ -1,0 +1,1 @@
+[{"values":["QA"],"name":"Environment"},{"values":["Chromium"],"name":"Browser"},{"values":["linux"],"name":"OS"},{"values":["7.0.0-1017-azure"],"name":"OS_Version"},{"values":["v24.22.2"],"name":"Node_Version"},{"values":["Playwright"],"name":"Framework"}]
