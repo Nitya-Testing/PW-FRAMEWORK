@@ -9,7 +9,7 @@ test("Home Page Title Test", async({homePage})=>{
     const homePageTitle = await homePage.getPageTitle();
     expect(homePageTitle).toBe("My Account");
 })
-test("Logout Link Exist Test", async({homePage})=>{
+test("@sanity Logout Link Exist Test", async({homePage})=>{
     const isLogoutLinkVisible = await homePage.isLogOutLinkExists();
     expect(isLogoutLinkVisible).toBe(true);
 })

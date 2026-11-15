@@ -12,7 +12,7 @@ test.beforeEach(async ({page})=>{
     await loginPage.doLogin(process.env.USER_NAME!,process.env.PASSWORD!);
 })
 
-test("Home Page Title Test", async()=>{
+test("@sanity Home Page Title Test", async()=>{
     const homePageTitle = await homePage.getPageTitle();
     expect(homePageTitle).toBe("My Account");
 })

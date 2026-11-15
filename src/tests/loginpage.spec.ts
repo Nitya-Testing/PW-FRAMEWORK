@@ -21,7 +21,7 @@ test("Forgot password link exist test", async ()=>{
     let isLinkExists = await loginPage.isForgotPwdLinkExists();
     expect(isLinkExists).toBe(true);
 })
-test("User is able to login with valid credentials Test",async ()=>{
+test("@sanity User is able to login with valid credentials Test",async ()=>{
     await loginPage.doLogin(process.env.USER_NAME!,process.env.PASSWORD!);
     expect.soft(await homePage.isLogOutLinkExists()).toBeTruthy();
     const homePageTitle = await homePage.getHomePageTitle();

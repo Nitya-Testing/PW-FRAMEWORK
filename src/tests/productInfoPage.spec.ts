@@ -17,7 +17,7 @@ test('Verify Product Images count test' , async ({homePage,searchResultsPage,pro
     expect(imagesCount).toBe(4);
 })
 
-test('Verify product info', async({homePage,searchResultsPage,productInfoPage})=>{
+test('@sanity Verify product info', async({homePage,searchResultsPage,productInfoPage})=>{
     await homePage.doSearch("macbook");
     await searchResultsPage.clickProduct("MacBook Pro");
     let actualProductInfoMap = await productInfoPage.getProductInfo();
