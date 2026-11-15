@@ -1,6 +1,6 @@
 # ═══════════════════════════════════════════════════════════════
 # FILE: .github/workflows/master-pipeline.yml
-# REPO: naveenanimation20/OpenCartWebAPIFramework
+# REPO: Nitya-Testing/PW-FRAMEWORK
 # DEV REPO: jglick/simple-maven-project-with-tests
 # ═══════════════════════════════════════════════════════════════
 # "Run up to environment" — the dropdown controls how far the
@@ -85,7 +85,7 @@ jobs:
       - name: Checkout QA repo
         uses: actions/checkout@v4
         with:
-          repository: naveenanimation20/OpenCartWebAPIFramework
+          repository: Nitya-Testing/PW-FRAMEWORK
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -185,7 +185,7 @@ jobs:
       - name: Checkout QA repo
         uses: actions/checkout@v4
         with:
-          repository: naveenanimation20/OpenCartWebAPIFramework
+          repository: Nitya-Testing/PW-FRAMEWORK
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -285,7 +285,7 @@ jobs:
       - name: Checkout QA repo
         uses: actions/checkout@v4
         with:
-          repository: naveenanimation20/OpenCartWebAPIFramework
+          repository: Nitya-Testing/PW-FRAMEWORK
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -386,7 +386,7 @@ jobs:
       - name: Checkout QA repo
         uses: actions/checkout@v4
         with:
-          repository: naveenanimation20/OpenCartWebAPIFramework
+          repository: Nitya-Testing/PW-FRAMEWORK
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
