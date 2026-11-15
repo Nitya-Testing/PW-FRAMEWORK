@@ -126,14 +126,11 @@ jobs:
           npx playwright test --project=chromium --grep @smoke
         env:
           ENV: dev
-          BASE_URL: ${{ secrets.BASE_URL }}
-          USERNAME: ${{ secrets.USERNAME }}
+          BASEURL: ${{ secrets.BASEURL }}
+          USER_NAME: ${{ secrets.USER_NAME }}
           PASSWORD: ${{ secrets.PASSWORD }}
           API_BASE_URL: ${{ secrets.API_BASE_URL }}
           API_TOKEN: ${{ secrets.API_TOKEN }}
-          OAUTH_CLIENT_ID: ${{ secrets.OAUTH_CLIENT_ID }}
-          OAUTH_CLIENT_SECRET: ${{ secrets.OAUTH_CLIENT_SECRET }}
-          GRANT_TYPE: ${{ secrets.GRANT_TYPE }}
 
       - name: Generate Allure Report
         if: always()
@@ -229,14 +226,11 @@ jobs:
           npx playwright test --project=chromium
         env:
           ENV: qa
-          BASE_URL: ${{ secrets.BASE_URL }}
-          USERNAME: ${{ secrets.USERNAME }}
+          BASEURL: ${{ secrets.BASEURL }}
+          USER_NAME: ${{ secrets.USER_NAME }}
           PASSWORD: ${{ secrets.PASSWORD }}
           API_BASE_URL: ${{ secrets.API_BASE_URL }}
           API_TOKEN: ${{ secrets.API_TOKEN }}
-          OAUTH_CLIENT_ID: ${{ secrets.OAUTH_CLIENT_ID }}
-          OAUTH_CLIENT_SECRET: ${{ secrets.OAUTH_CLIENT_SECRET }}
-          GRANT_TYPE: ${{ secrets.GRANT_TYPE }}
 
       - name: Generate Allure Report
         if: always()
@@ -332,14 +326,11 @@ jobs:
           npx playwright test --project=chromium --grep @smoke
         env:
           ENV: stage
-          BASE_URL: ${{ secrets.BASE_URL }}
-          USERNAME: ${{ secrets.USERNAME }}
+          BASEURL: ${{ secrets.BASEURL }}
+          USER_NAME: ${{ secrets.USER_NAME }}
           PASSWORD: ${{ secrets.PASSWORD }}
           API_BASE_URL: ${{ secrets.API_BASE_URL }}
           API_TOKEN: ${{ secrets.API_TOKEN }}
-          OAUTH_CLIENT_ID: ${{ secrets.OAUTH_CLIENT_ID }}
-          OAUTH_CLIENT_SECRET: ${{ secrets.OAUTH_CLIENT_SECRET }}
-          GRANT_TYPE: ${{ secrets.GRANT_TYPE }}
 
       - name: Generate Allure Report
         if: always()
@@ -436,14 +427,11 @@ jobs:
           npx playwright test --project=chromium --grep @smoke
         env:
           ENV: prod
-          BASE_URL: ${{ secrets.BASE_URL }}
-          USERNAME: ${{ secrets.USERNAME }}
+          BASEURL: ${{ secrets.BASEURL }}
+          USER_NAME: ${{ secrets.USER_NAME }}
           PASSWORD: ${{ secrets.PASSWORD }}
           API_BASE_URL: ${{ secrets.API_BASE_URL }}
           API_TOKEN: ${{ secrets.API_TOKEN }}
-          OAUTH_CLIENT_ID: ${{ secrets.OAUTH_CLIENT_ID }}
-          OAUTH_CLIENT_SECRET: ${{ secrets.OAUTH_CLIENT_SECRET }}
-          GRANT_TYPE: ${{ secrets.GRANT_TYPE }}
 
       - name: Generate Allure Report
         if: always()
