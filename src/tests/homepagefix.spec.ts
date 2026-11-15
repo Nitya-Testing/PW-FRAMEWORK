@@ -5,7 +5,7 @@ test.beforeEach(async ({loginPage})=>{
     await loginPage.doLogin(process.env.USER_NAME!,process.env.PASSWORD!);
 })
 
-test("Home Page Title Test", async({homePage})=>{
+test("@sanity Home Page Title Test", async({homePage})=>{
     const homePageTitle = await homePage.getPageTitle();
     expect(homePageTitle).toBe("My Account");
 })
@@ -13,7 +13,7 @@ test("@sanity Logout Link Exist Test", async({homePage})=>{
     const isLogoutLinkVisible = await homePage.isLogOutLinkExists();
     expect(isLogoutLinkVisible).toBe(true);
 })
-test("Homepage headings Test" , async({homePage})=>{
+test("@sanity Homepage headings Test" , async({homePage})=>{
     let headings = await homePage.getHeadings();
     expect(headings).toHaveLength(4);
     expect(headings).toEqual(["My Account","My Orders","My Affiliate Account","Newsletter"]);

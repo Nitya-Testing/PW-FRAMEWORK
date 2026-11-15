@@ -22,7 +22,7 @@ for(let product of productData){
 
 
 for(let product of productData){
-test(`Verify User Is Able To Land On Product Page of  - ${product.productName}`, async ({homePage,searchResultsPage,page})=>{
+test(`@sanity Verify User Is Able To Land On Product Page of  - ${product.productName}`, async ({homePage,searchResultsPage,page})=>{
     await homePage.doSearch(product.searchKey!);
     await searchResultsPage.clickProduct(product.productName!);
     expect(await page.title()).toBe(product.productName!);
