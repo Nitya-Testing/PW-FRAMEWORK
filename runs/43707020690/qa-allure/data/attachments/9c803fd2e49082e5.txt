@@ -1,0 +1,7 @@
+{
+  access_token: 'at_nwglccgqhodzo1awj6qk1a35',
+  token_type: 'Bearer',
+  expires_in: 15,
+  scope: 'read',
+  requestId: 'b21bf04650cd7f65'
+}
