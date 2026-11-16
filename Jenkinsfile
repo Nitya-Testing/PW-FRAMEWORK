@@ -61,7 +61,7 @@ pipeline {
                 dir('dev-app') {
                     git url: 'https://github.com/jglick/simple-maven-project-with-tests.git',
                         branch: 'master'
-                    sh 'mvn clean install -Dmaven.test.failure.ignore=true'
+                    bat 'mvn clean install -Dmaven.test.failure.ignore=true'
                 }
             }
             post {
@@ -82,8 +82,8 @@ pipeline {
                 dir('qa-tests') {
                     git url: 'https://github.com/naveenanimation20/OpenCartWebAPIFramework.git',
                         branch: 'main'
-                    sh 'npm ci'
-                    sh 'npx playwright install --with-deps chromium'
+                    bat 'npm ci'
+                    bat 'npx playwright install chromium'
                 }
             }
         }
@@ -106,7 +106,9 @@ pipeline {
                 echo "  Running SANITY @smoke on DEV"
                 echo "========================================="
                 dir('qa-tests') {
-                    sh 'rm -rf allure-results reports reporting-labs'
+                    bat '''if exist allure-results rmdir /s /q allure-results
+if exist reports rmdir /s /q reports
+if exist reporting-labs rmdir /s /q reporting-labs'''
                     withCredentials([
                         usernamePassword(credentialsId: 'dev-credentials',
                             usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD'),
@@ -114,24 +116,20 @@ pipeline {
                         string(credentialsId: 'dev-base-url', variable: 'BASE_URL'),
                         string(credentialsId: 'api-base-url', variable: 'API_BASE_URL')
                     ]) {
-                        sh '''
-                            ENV=dev \
-                            BASE_URL=$BASE_URL \
-                            USERNAME=$USERNAME \
-                            PASSWORD=$PASSWORD \
-                            API_BASE_URL=$API_BASE_URL \
-                            API_TOKEN=$API_TOKEN \
-                            npx playwright test --project=chromium --grep @smoke
-                        '''
+                        withEnv(['ENV=dev']) {
+                            bat 'npx playwright test --project=chromium --grep @smoke'
+                        }
                     }
                 }
             }
             post {
                 always {
-                    sh 'mkdir -p reports-dev/html reports-dev/allure reports-dev/reportinglabs'
-                    sh 'cp -r qa-tests/reports/html-report/* reports-dev/html/ || true'
-                    sh 'allure generate qa-tests/allure-results --clean -o reports-dev/allure || true'
-                    sh 'cp -r qa-tests/reporting-labs/* reports-dev/reportinglabs/ || true'
+                    bat 'if not exist "reports-dev\\html" mkdir "reports-dev\\html"'
+                    bat 'if not exist "reports-dev\\allure" mkdir "reports-dev\\allure"'
+                    bat 'if not exist "reports-dev\\reportinglabs" mkdir "reports-dev\\reportinglabs"'
+                    bat 'if exist "qa-tests\\reports\\html-report\\*" xcopy /E /I /Y "qa-tests\\reports\\html-report\\*" "reports-dev\\html"'
+                    bat 'if exist "qa-tests\\allure-results\\*" allure generate qa-tests/allure-results --clean -o reports-dev/allure'
+                    bat 'if exist "qa-tests\\reporting-labs\\*" xcopy /E /I /Y "qa-tests\\reporting-labs\\*" "reports-dev\\reportinglabs"'
                     publishHTML(target: [
                         reportName: 'DEV Sanity - PW HTML Report',
                         reportDir: 'reports-dev/html',
@@ -175,7 +173,9 @@ pipeline {
                 echo "  Running REGRESSION (all tests) on QA"
                 echo "========================================="
                 dir('qa-tests') {
-                    sh 'rm -rf allure-results reports reporting-labs'
+                    bat '''if exist allure-results rmdir /s /q allure-results
+if exist reports rmdir /s /q reports
+if exist reporting-labs rmdir /s /q reporting-labs'''
                     withCredentials([
                         usernamePassword(credentialsId: 'qa-credentials',
                             usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD'),
@@ -183,24 +183,20 @@ pipeline {
                         string(credentialsId: 'qa-base-url', variable: 'BASE_URL'),
                         string(credentialsId: 'api-base-url', variable: 'API_BASE_URL')
                     ]) {
-                        sh '''
-                            ENV=qa \
-                            BASE_URL=$BASE_URL \
-                            USERNAME=$USERNAME \
-                            PASSWORD=$PASSWORD \
-                            API_BASE_URL=$API_BASE_URL \
-                            API_TOKEN=$API_TOKEN \
-                            npx playwright test --project=chromium
-                        '''
+                        withEnv(['ENV=qa']) {
+                            bat 'npx playwright test --project=chromium'
+                        }
                     }
                 }
             }
             post {
                 always {
-                    sh 'mkdir -p reports-qa/html reports-qa/allure reports-qa/reportinglabs'
-                    sh 'cp -r qa-tests/reports/html-report/* reports-qa/html/ || true'
-                    sh 'allure generate qa-tests/allure-results --clean -o reports-qa/allure || true'
-                    sh 'cp -r qa-tests/reporting-labs/* reports-qa/reportinglabs/ || true'
+                    bat 'if not exist "reports-qa\\html" mkdir "reports-qa\\html"'
+                    bat 'if not exist "reports-qa\\allure" mkdir "reports-qa\\allure"'
+                    bat 'if not exist "reports-qa\\reportinglabs" mkdir "reports-qa\\reportinglabs"'
+                    bat 'if exist "qa-tests\\reports\\html-report\\*" xcopy /E /I /Y "qa-tests\\reports\\html-report\\*" "reports-qa\\html"'
+                    bat 'if exist "qa-tests\\allure-results\\*" allure generate qa-tests/allure-results --clean -o reports-qa/allure'
+                    bat 'if exist "qa-tests\\reporting-labs\\*" xcopy /E /I /Y "qa-tests\\reporting-labs\\*" "reports-qa\\reportinglabs"'
                     publishHTML(target: [
                         reportName: 'QA Regression - PW HTML Report',
                         reportDir: 'reports-qa/html',
@@ -244,7 +240,9 @@ pipeline {
                 echo "  Running SANITY @smoke on STAGE"
                 echo "========================================="
                 dir('qa-tests') {
-                    sh 'rm -rf allure-results reports reporting-labs'
+                    bat '''if exist allure-results rmdir /s /q allure-results
+if exist reports rmdir /s /q reports
+if exist reporting-labs rmdir /s /q reporting-labs'''
                     withCredentials([
                         usernamePassword(credentialsId: 'stage-credentials',
                             usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD'),
@@ -252,24 +250,20 @@ pipeline {
                         string(credentialsId: 'stage-base-url', variable: 'BASE_URL'),
                         string(credentialsId: 'api-base-url', variable: 'API_BASE_URL')
                     ]) {
-                        sh '''
-                            ENV=stage \
-                            BASE_URL=$BASE_URL \
-                            USERNAME=$USERNAME \
-                            PASSWORD=$PASSWORD \
-                            API_BASE_URL=$API_BASE_URL \
-                            API_TOKEN=$API_TOKEN \
-                            npx playwright test --project=chromium --grep @smoke
-                        '''
+                        withEnv(['ENV=stage']) {
+                            bat 'npx playwright test --project=chromium --grep @smoke'
+                        }
                     }
                 }
             }
             post {
                 always {
-                    sh 'mkdir -p reports-stage/html reports-stage/allure reports-stage/reportinglabs'
-                    sh 'cp -r qa-tests/reports/html-report/* reports-stage/html/ || true'
-                    sh 'allure generate qa-tests/allure-results --clean -o reports-stage/allure || true'
-                    sh 'cp -r qa-tests/reporting-labs/* reports-stage/reportinglabs/ || true'
+                    bat 'if not exist "reports-stage\\html" mkdir "reports-stage\\html"'
+                    bat 'if not exist "reports-stage\\allure" mkdir "reports-stage\\allure"'
+                    bat 'if not exist "reports-stage\\reportinglabs" mkdir "reports-stage\\reportinglabs"'
+                    bat 'if exist "qa-tests\\reports\\html-report\\*" xcopy /E /I /Y "qa-tests\\reports\\html-report\\*" "reports-stage\\html"'
+                    bat 'if exist "qa-tests\\allure-results\\*" allure generate qa-tests/allure-results --clean -o reports-stage/allure'
+                    bat 'if exist "qa-tests\\reporting-labs\\*" xcopy /E /I /Y "qa-tests\\reporting-labs\\*" "reports-stage\\reportinglabs"'
                     publishHTML(target: [
                         reportName: 'STAGE Sanity - PW HTML Report',
                         reportDir: 'reports-stage/html',
@@ -321,7 +315,9 @@ pipeline {
                 echo "  Running SMOKE @smoke on PROD"
                 echo "========================================="
                 dir('qa-tests') {
-                    sh 'rm -rf allure-results reports reporting-labs'
+                    bat '''if exist allure-results rmdir /s /q allure-results
+if exist reports rmdir /s /q reports
+if exist reporting-labs rmdir /s /q reporting-labs'''
                     withCredentials([
                         usernamePassword(credentialsId: 'prod-credentials',
                             usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD'),
@@ -329,24 +325,20 @@ pipeline {
                         string(credentialsId: 'prod-base-url', variable: 'BASE_URL'),
                         string(credentialsId: 'api-base-url', variable: 'API_BASE_URL')
                     ]) {
-                        sh '''
-                            ENV=prod \
-                            BASE_URL=$BASE_URL \
-                            USERNAME=$USERNAME \
-                            PASSWORD=$PASSWORD \
-                            API_BASE_URL=$API_BASE_URL \
-                            API_TOKEN=$API_TOKEN \
-                            npx playwright test --project=chromium --grep @smoke
-                        '''
+                        withEnv(['ENV=prod']) {
+                            bat 'npx playwright test --project=chromium --grep @smoke'
+                        }
                     }
                 }
             }
             post {
                 always {
-                    sh 'mkdir -p reports-prod/html reports-prod/allure reports-prod/reportinglabs'
-                    sh 'cp -r qa-tests/reports/html-report/* reports-prod/html/ || true'
-                    sh 'allure generate qa-tests/allure-results --clean -o reports-prod/allure || true'
-                    sh 'cp -r qa-tests/reporting-labs/* reports-prod/reportinglabs/ || true'
+                    bat 'if not exist "reports-prod\\html" mkdir "reports-prod\\html"'
+                    bat 'if not exist "reports-prod\\allure" mkdir "reports-prod\\allure"'
+                    bat 'if not exist "reports-prod\\reportinglabs" mkdir "reports-prod\\reportinglabs"'
+                    bat 'if exist "qa-tests\\reports\\html-report\\*" xcopy /E /I /Y "qa-tests\\reports\\html-report\\*" "reports-prod\\html"'
+                    bat 'if exist "qa-tests\\allure-results\\*" allure generate qa-tests/allure-results --clean -o reports-prod/allure'
+                    bat 'if exist "qa-tests\\reporting-labs\\*" xcopy /E /I /Y "qa-tests\\reporting-labs\\*" "reports-prod\\reportinglabs"'
                     publishHTML(target: [
                         reportName: 'PROD Smoke - PW HTML Report',
                         reportDir: 'reports-prod/html',
