@@ -12,22 +12,35 @@ export default defineConfig({
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
   ...(process.env.CI ? { workers: '50%' } : {}),
-  reporter: [
-    ["list"],
-    ["json", { outputFile: "reports/playwright-results.json" }],
-    ["html" , {outputFolder: "reports/html-report" , open:"never"}],
-    ["allure-playwright", {
-        resultsDir: 'allure-results',
-        environmentInfo: {
+
+
+
+  reporter: process.env.CI
+    ? [
+      ["blob"],
+      ["html", { outputFolder: "reports/html-report", open: "never" }],
+      ["allure-playwright", { outputFolder: "allure-results", suiteTitle: true, environmentInfo: {
           Environment: process.env.RUN_ENV || 'QA',
           Browser: 'Chromium',
           OS: os.platform(),
           OS_Version: os.release(),
           Node_Version: process.version,
           Framework: 'Playwright'
-        }
-      }],
-  ],
+        } }],
+    ]
+    : [
+      ["blob", { outputDir: "blob-report" }],
+      ["list"],
+      ["html", { outputFolder: "reports/html-report", open: "never" }],
+      ["allure-playwright", { outputFolder: "allure-results", suiteTitle: true, environmentInfo: {
+          Environment: process.env.RUN_ENV || 'QA',
+          Browser: 'Chromium',
+          OS: os.platform(),
+          OS_Version: os.release(),
+          Node_Version: process.version,
+          Framework: 'Playwright'
+        } }],
+    ],
 
 
   use: {
