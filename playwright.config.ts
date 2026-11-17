@@ -6,6 +6,11 @@ const ENV = process.env.ENV || "qa";
 console.log(`Testcases are Running On Environment - ${ENV}`);
 dotenv.config({path: `config/.env.${ENV}`});
 
+console.log('#############################################');
+console.log('CI: ->>>', process.env.CI);
+console.log('Workers: ->>>', process.env.CI ? '50%' : 'Default');
+console.log('#############################################');
+
 export default defineConfig({
   testDir: './src/tests',
   fullyParallel: true,
