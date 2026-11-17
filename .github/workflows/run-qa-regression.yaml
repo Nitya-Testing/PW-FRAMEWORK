@@ -1,5 +1,5 @@
 
-name: Playwright QA Tests
+name: QA Regression without Sharding
 
 on:
   workflow_dispatch:
