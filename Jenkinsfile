@@ -80,8 +80,8 @@ pipeline {
                 echo "  Installing Playwright Dependencies"
                 echo "========================================="
                 dir('qa-tests') {
-                    git url: 'https://github.com/naveenanimation20/OpenCartWebAPIFramework.git',
-                        branch: 'main'
+                    git url: 'https://github.com/Nitya-Testing/PW-FRAMEWORK.git',
+                        branch: 'master'
                     bat 'npm ci'
                     bat 'npx playwright install chromium'
                 }
