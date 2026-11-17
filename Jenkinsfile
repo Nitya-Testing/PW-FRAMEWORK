@@ -113,7 +113,7 @@ if exist reporting-labs rmdir /s /q reporting-labs'''
                         usernamePassword(credentialsId: 'dev-credentials',
                             usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD'),
                         string(credentialsId: 'api-token', variable: 'API_TOKEN'),
-                        string(credentialsId: 'dev-base-url', variable: 'BASEURL'),
+                        string(credentialsId: 'dev-base-url', variable: 'BASE_URL'),
                         string(credentialsId: 'api-base-url', variable: 'API_BASE_URL')
                     ]) {
                         withEnv(['ENV=dev']) {
@@ -180,7 +180,7 @@ if exist reporting-labs rmdir /s /q reporting-labs'''
                         usernamePassword(credentialsId: 'qa-credentials',
                             usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD'),
                         string(credentialsId: 'api-token', variable: 'API_TOKEN'),
-                        string(credentialsId: 'qa-base-url', variable: 'BASEURL'),
+                        string(credentialsId: 'qa-base-url', variable: 'BASE_URL'),
                         string(credentialsId: 'api-base-url', variable: 'API_BASE_URL')
                     ]) {
                         withEnv(['ENV=qa']) {
@@ -247,7 +247,7 @@ if exist reporting-labs rmdir /s /q reporting-labs'''
                         usernamePassword(credentialsId: 'stage-credentials',
                             usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD'),
                         string(credentialsId: 'api-token', variable: 'API_TOKEN'),
-                        string(credentialsId: 'stage-base-url', variable: 'BASEURL'),
+                        string(credentialsId: 'stage-base-url', variable: 'BASE_URL'),
                         string(credentialsId: 'api-base-url', variable: 'API_BASE_URL')
                     ]) {
                         withEnv(['ENV=stage']) {
@@ -322,7 +322,7 @@ if exist reporting-labs rmdir /s /q reporting-labs'''
                         usernamePassword(credentialsId: 'prod-credentials',
                             usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD'),
                         string(credentialsId: 'api-token', variable: 'API_TOKEN'),
-                        string(credentialsId: 'prod-base-url', variable: 'BASEURL'),
+                        string(credentialsId: 'prod-base-url', variable: 'BASE_URL'),
                         string(credentialsId: 'api-base-url', variable: 'API_BASE_URL')
                     ]) {
                         withEnv(['ENV=prod']) {
