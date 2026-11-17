@@ -3,10 +3,9 @@
 // Playwright TypeScript Framework
 // Naveen Automation Labs
 // ═══════════════════════════════════════════════════════════════
-// Reports per stage (3 reports × 4 envs = 12 total):
+// Reports per stage (2 reports × 4 envs = 8 total):
 //   1. PW HTML Report    → reports-{env}/html/
 //   2. Allure Report     → reports-{env}/allure/
-//   3. ReportingLabs     → reports-{env}/reportinglabs/
 // ═══════════════════════════════════════════════════════════════
 
 pipeline {
@@ -107,8 +106,7 @@ pipeline {
                 echo "========================================="
                 dir('qa-tests') {
                     bat '''if exist allure-results rmdir /s /q allure-results
-if exist reports rmdir /s /q reports
-if exist reporting-labs rmdir /s /q reporting-labs'''
+if exist reports rmdir /s /q reports'''
                     withCredentials([
                         usernamePassword(credentialsId: 'dev-credentials',
                             usernameVariable: 'USER_NAME', passwordVariable: 'PASSWORD'),
@@ -126,10 +124,8 @@ if exist reporting-labs rmdir /s /q reporting-labs'''
                 always {
                     bat 'if not exist "reports-dev\\html" mkdir "reports-dev\\html"'
                     bat 'if not exist "reports-dev\\allure" mkdir "reports-dev\\allure"'
-                    bat 'if not exist "reports-dev\\reportinglabs" mkdir "reports-dev\\reportinglabs"'
                     bat 'if exist "qa-tests\\reports\\html-report\\*" xcopy /E /I /Y "qa-tests\\reports\\html-report\\*" "reports-dev\\html"'
                     bat 'if exist "qa-tests\\allure-results\\*" allure generate qa-tests/allure-results --clean -o reports-dev/allure'
-                    bat 'if exist "qa-tests\\reporting-labs\\*" xcopy /E /I /Y "qa-tests\\reporting-labs\\*" "reports-dev\\reportinglabs"'
                     publishHTML(target: [
                         reportName: 'DEV Sanity - PW HTML Report',
                         reportDir: 'reports-dev/html',
@@ -140,13 +136,6 @@ if exist reporting-labs rmdir /s /q reporting-labs'''
                     publishHTML(target: [
                         reportName: 'DEV Sanity - Allure Report',
                         reportDir: 'reports-dev/allure',
-                        reportFiles: 'index.html',
-                        keepAll: true,
-                        alwaysLinkToLastBuild: true
-                    ])
-                    publishHTML(target: [
-                        reportName: 'DEV Sanity - ReportingLabs Report',
-                        reportDir: 'reports-dev/reportinglabs',
                         reportFiles: 'index.html',
                         keepAll: true,
                         alwaysLinkToLastBuild: true
@@ -174,8 +163,7 @@ if exist reporting-labs rmdir /s /q reporting-labs'''
                 echo "========================================="
                 dir('qa-tests') {
                     bat '''if exist allure-results rmdir /s /q allure-results
-if exist reports rmdir /s /q reports
-if exist reporting-labs rmdir /s /q reporting-labs'''
+if exist reports rmdir /s /q reports'''
                     withCredentials([
                         usernamePassword(credentialsId: 'qa-credentials',
                             usernameVariable: 'USER_NAME', passwordVariable: 'PASSWORD'),
@@ -193,10 +181,8 @@ if exist reporting-labs rmdir /s /q reporting-labs'''
                 always {
                     bat 'if not exist "reports-qa\\html" mkdir "reports-qa\\html"'
                     bat 'if not exist "reports-qa\\allure" mkdir "reports-qa\\allure"'
-                    bat 'if not exist "reports-qa\\reportinglabs" mkdir "reports-qa\\reportinglabs"'
                     bat 'if exist "qa-tests\\reports\\html-report\\*" xcopy /E /I /Y "qa-tests\\reports\\html-report\\*" "reports-qa\\html"'
                     bat 'if exist "qa-tests\\allure-results\\*" allure generate qa-tests/allure-results --clean -o reports-qa/allure'
-                    bat 'if exist "qa-tests\\reporting-labs\\*" xcopy /E /I /Y "qa-tests\\reporting-labs\\*" "reports-qa\\reportinglabs"'
                     publishHTML(target: [
                         reportName: 'QA Regression - PW HTML Report',
                         reportDir: 'reports-qa/html',
@@ -207,13 +193,6 @@ if exist reporting-labs rmdir /s /q reporting-labs'''
                     publishHTML(target: [
                         reportName: 'QA Regression - Allure Report',
                         reportDir: 'reports-qa/allure',
-                        reportFiles: 'index.html',
-                        keepAll: true,
-                        alwaysLinkToLastBuild: true
-                    ])
-                    publishHTML(target: [
-                        reportName: 'QA Regression - ReportingLabs Report',
-                        reportDir: 'reports-qa/reportinglabs',
                         reportFiles: 'index.html',
                         keepAll: true,
                         alwaysLinkToLastBuild: true
@@ -241,8 +220,7 @@ if exist reporting-labs rmdir /s /q reporting-labs'''
                 echo "========================================="
                 dir('qa-tests') {
                     bat '''if exist allure-results rmdir /s /q allure-results
-if exist reports rmdir /s /q reports
-if exist reporting-labs rmdir /s /q reporting-labs'''
+if exist reports rmdir /s /q reports'''
                     withCredentials([
                         usernamePassword(credentialsId: 'stage-credentials',
                             usernameVariable: 'USER_NAME', passwordVariable: 'PASSWORD'),
@@ -260,10 +238,8 @@ if exist reporting-labs rmdir /s /q reporting-labs'''
                 always {
                     bat 'if not exist "reports-stage\\html" mkdir "reports-stage\\html"'
                     bat 'if not exist "reports-stage\\allure" mkdir "reports-stage\\allure"'
-                    bat 'if not exist "reports-stage\\reportinglabs" mkdir "reports-stage\\reportinglabs"'
                     bat 'if exist "qa-tests\\reports\\html-report\\*" xcopy /E /I /Y "qa-tests\\reports\\html-report\\*" "reports-stage\\html"'
                     bat 'if exist "qa-tests\\allure-results\\*" allure generate qa-tests/allure-results --clean -o reports-stage/allure'
-                    bat 'if exist "qa-tests\\reporting-labs\\*" xcopy /E /I /Y "qa-tests\\reporting-labs\\*" "reports-stage\\reportinglabs"'
                     publishHTML(target: [
                         reportName: 'STAGE Sanity - PW HTML Report',
                         reportDir: 'reports-stage/html',
@@ -274,13 +250,6 @@ if exist reporting-labs rmdir /s /q reporting-labs'''
                     publishHTML(target: [
                         reportName: 'STAGE Sanity - Allure Report',
                         reportDir: 'reports-stage/allure',
-                        reportFiles: 'index.html',
-                        keepAll: true,
-                        alwaysLinkToLastBuild: true
-                    ])
-                    publishHTML(target: [
-                        reportName: 'STAGE Sanity - ReportingLabs Report',
-                        reportDir: 'reports-stage/reportinglabs',
                         reportFiles: 'index.html',
                         keepAll: true,
                         alwaysLinkToLastBuild: true
@@ -316,8 +285,7 @@ if exist reporting-labs rmdir /s /q reporting-labs'''
                 echo "========================================="
                 dir('qa-tests') {
                     bat '''if exist allure-results rmdir /s /q allure-results
-if exist reports rmdir /s /q reports
-if exist reporting-labs rmdir /s /q reporting-labs'''
+if exist reports rmdir /s /q reports'''
                     withCredentials([
                         usernamePassword(credentialsId: 'prod-credentials',
                             usernameVariable: 'USER_NAME', passwordVariable: 'PASSWORD'),
@@ -335,10 +303,8 @@ if exist reporting-labs rmdir /s /q reporting-labs'''
                 always {
                     bat 'if not exist "reports-prod\\html" mkdir "reports-prod\\html"'
                     bat 'if not exist "reports-prod\\allure" mkdir "reports-prod\\allure"'
-                    bat 'if not exist "reports-prod\\reportinglabs" mkdir "reports-prod\\reportinglabs"'
                     bat 'if exist "qa-tests\\reports\\html-report\\*" xcopy /E /I /Y "qa-tests\\reports\\html-report\\*" "reports-prod\\html"'
                     bat 'if exist "qa-tests\\allure-results\\*" allure generate qa-tests/allure-results --clean -o reports-prod/allure'
-                    bat 'if exist "qa-tests\\reporting-labs\\*" xcopy /E /I /Y "qa-tests\\reporting-labs\\*" "reports-prod\\reportinglabs"'
                     publishHTML(target: [
                         reportName: 'PROD Smoke - PW HTML Report',
                         reportDir: 'reports-prod/html',
@@ -349,13 +315,6 @@ if exist reporting-labs rmdir /s /q reporting-labs'''
                     publishHTML(target: [
                         reportName: 'PROD Smoke - Allure Report',
                         reportDir: 'reports-prod/allure',
-                        reportFiles: 'index.html',
-                        keepAll: true,
-                        alwaysLinkToLastBuild: true
-                    ])
-                    publishHTML(target: [
-                        reportName: 'PROD Smoke - ReportingLabs Report',
-                        reportDir: 'reports-prod/reportinglabs',
                         reportFiles: 'index.html',
                         keepAll: true,
                         alwaysLinkToLastBuild: true
@@ -418,8 +377,8 @@ if exist reporting-labs rmdir /s /q reporting-labs'''
                                     </table>
                                 </div>
                                 <div style="background: #f8f9fa; padding: 20px 24px; border-top: 1px solid #eee;">
-                                    <h3 style="margin: 0 0 12px;">📊 Reports (12 reports per build)</h3>
-                                    <p style="color: #666; font-size: 13px; margin: 0 0 12px;">Each stage publishes 3 reports: PW HTML + Allure + ReportingLabs</p>
+                                    <h3 style="margin: 0 0 12px;">📊 Reports (8 reports per build)</h3>
+                                    <p style="color: #666; font-size: 13px; margin: 0 0 12px;">Each stage publishes 2 reports: PW HTML + Allure</p>
                                     <p style="color: #666; font-size: 13px; margin: 0 0 12px;">Click below to open Jenkins build page → Reports in sidebar</p>
                                     <a href="${env.BUILD_URL}" style="display: inline-block; padding: 10px 20px; background: #1a1a2e; color: white; text-decoration: none; border-radius: 6px; margin: 4px;">📁 Open Jenkins Build</a>
                                     <a href="${env.BUILD_URL}console" style="display: inline-block; padding: 10px 20px; background: #6c757d; color: white; text-decoration: none; border-radius: 6px; margin: 4px;">🔍 Console Logs</a>
