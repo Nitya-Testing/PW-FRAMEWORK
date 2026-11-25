@@ -53,6 +53,7 @@
     "allure-commandline": "^2.46.1",
     "allure-playwright": "^3.14.0",
     "rimraf": "^6.1.4",
+    "tsx": "^4.23.15",
     "typescript": "^7.0.2"
   },
   "dependencies": {

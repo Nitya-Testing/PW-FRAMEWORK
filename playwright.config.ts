@@ -23,7 +23,7 @@ export default defineConfig({
   reporter: process.env.CI
     ? [
       ["blob"],
-      ["html", { outputFolder: "reports/html-report", open: "never" }],
+      ["html",{ outputFolder: "reports/html-report", open: "never" }],
       ["allure-playwright", { outputFolder: "allure-results", suiteTitle: true, environmentInfo: {
           Environment: process.env.RUN_ENV || 'QA',
           Browser: 'Chromium',
