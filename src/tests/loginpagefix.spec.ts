@@ -12,7 +12,7 @@ test("Login Page Title Test", async ({loginPage})=>{
     meta({priority:"P1",severity:"major",epic:"JIRA-2526",owner:"Nitya"});
     let title = await loginPage.getPageTitle();
     console.log(`Login Page Title is : ${title}`);
-    expect(title).toBe("Account Loginnn");
+    expect(title).toBe("Account Login");
 })
 
 test("Forgot password link exist test", async ({loginPage})=>{
