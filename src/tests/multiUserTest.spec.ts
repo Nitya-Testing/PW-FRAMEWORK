@@ -2,7 +2,7 @@
 import {Browser, BrowserContext, chromium,Page,test} from "@playwright/test";
 
 test("Test Multi User Test",async()=>{
-    let browser:Browser = await chromium.launch({channel:"chrome",headless:false});
+    let browser:Browser = await chromium.launch({channel:"chrome"});
     let ctx1:BrowserContext = await browser.newContext();
     let ctx2:BrowserContext = await browser.newContext();
 

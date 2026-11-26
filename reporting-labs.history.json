@@ -1,0 +1,1227 @@
+[
+ {
+  "time": 1795705153580,
+  "duration": 28090.352000000003,
+  "passed": 40,
+  "failed": 0,
+  "flaky": 0,
+  "skipped": 1,
+  "total": 41,
+  "tests": {
+   "chromium::src/tests/api/amadus.oauth2.spec.ts::Test Generate Access Token": [
+    "p",
+    743
+   ],
+   "chromium::src/tests/api/opencart.api.schema.spec.ts::GET user schema validation": [
+    "p",
+    1101
+   ],
+   "chromium::src/tests/api/opencart.api.schema.spec.ts::GET users schema validation": [
+    "p",
+    769
+   ],
+   "chromium::src/tests/api/users.api.sep.spec.ts::Running User APIs › @smoke Verify GET call": [
+    "p",
+    744
+   ],
+   "chromium::src/tests/api/users.api.sep.spec.ts::Running User APIs › @smoke Verify POST call": [
+    "p",
+    518
+   ],
+   "chromium::src/tests/api/users.api.sep.spec.ts::Running User APIs › @smoke Verify PUT call": [
+    "p",
+    424
+   ],
+   "chromium::src/tests/api/users.api.sep.spec.ts::Running User APIs › @smoke Verify DELETE call": [
+    "p",
+    587
+   ],
+   "chromium::src/tests/homepage.spec.ts::Home Page Title Test": [
+    "p",
+    6847
+   ],
+   "chromium::src/tests/homepage.spec.ts::Logout Link Exist Test": [
+    "p",
+    7076
+   ],
+   "chromium::src/tests/homepage.spec.ts::Homepage headings Test": [
+    "p",
+    7505
+   ],
+   "chromium::src/tests/homepagefix.spec.ts::@sanity Home Page Title Test": [
+    "p",
+    6409
+   ],
+   "chromium::src/tests/homepagefix.spec.ts::Logout Link Exist Test": [
+    "p",
+    6606
+   ],
+   "chromium::src/tests/homepagefix.spec.ts::@sanity Homepage headings Test": [
+    "p",
+    7558
+   ],
+   "chromium::src/tests/intercept.spec.ts::intercept and log requests": [
+    "p",
+    4618
+   ],
+   "chromium::src/tests/intercept.spec.ts::Intercept Mock data": [
+    "s",
+    0
+   ],
+   "chromium::src/tests/loginpage.spec.ts::Login Page Title Test": [
+    "p",
+    2725
+   ],
+   "chromium::src/tests/loginpage.spec.ts::Forgot password link exist test": [
+    "p",
+    3425
+   ],
+   "chromium::src/tests/loginpage.spec.ts::User is able to login with valid credentials Test": [
+    "p",
+    4696
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Login Page Title Test": [
+    "p",
+    2629
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Forgot password link exist test": [
+    "p",
+    2427
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::@sanity User is able to login with valid credentials Test": [
+    "p",
+    3981
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Login with wrong credentials with data driven approach": [
+    "p",
+    5055
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Invalid Login Test with -  invalid@gmail.com - Test1234": [
+    "p",
+    2895
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Invalid Login Test with -   - Test1234": [
+    "p",
+    4294
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Invalid Login Test with -  nityaranjan190592@gmail.com - Test1234": [
+    "p",
+    2523
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Invalid Login Test from Excel data -  invalid@gmail.com - test1234": [
+    "p",
+    3583
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Invalid Login Test from Excel data -   - test1234": [
+    "p",
+    2594
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Invalid Login Test from Excel data -  invalid@gmail.com - ": [
+    "p",
+    3109
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Invalid Login :  invalid@gmail.com - Test1234": [
+    "p",
+    2271
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Invalid Login :   - Test1234": [
+    "p",
+    2921
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Invalid Login :  invalid@gmail.com - ": [
+    "p",
+    2421
+   ],
+   "chromium::src/tests/multiUserTest.spec.ts::Test Multi User Test": [
+    "p",
+    3197
+   ],
+   "chromium::src/tests/productInfoPage.spec.ts::Verify Logo Should be Visible": [
+    "p",
+    2459
+   ],
+   "chromium::src/tests/productInfoPage.spec.ts::Verify Product Images count test": [
+    "p",
+    4953
+   ],
+   "chromium::src/tests/productInfoPage.spec.ts::Verify product info": [
+    "p",
+    5743
+   ],
+   "chromium::src/tests/search.spec.ts::Verify Search results count of - macbook  MacBook Pro": [
+    "p",
+    3566
+   ],
+   "chromium::src/tests/search.spec.ts::Verify Search results count of - macbook  MacBook Air": [
+    "p",
+    3600
+   ],
+   "chromium::src/tests/search.spec.ts::Verify Search results count of - imac  iMac": [
+    "p",
+    2900
+   ],
+   "chromium::src/tests/search.spec.ts::@sanity Verify User Is Able To Land On Product Page of  - MacBook Pro": [
+    "p",
+    3901
+   ],
+   "chromium::src/tests/search.spec.ts::@sanity Verify User Is Able To Land On Product Page of  - MacBook Air": [
+    "p",
+    4420
+   ],
+   "chromium::src/tests/search.spec.ts::@sanity Verify User Is Able To Land On Product Page of  - iMac": [
+    "p",
+    4835
+   ]
+  }
+ },
+ {
+  "time": 1795706032150,
+  "duration": 37271.710999999996,
+  "passed": 37,
+  "failed": 3,
+  "flaky": 0,
+  "skipped": 1,
+  "total": 41,
+  "tests": {
+   "chromium::src/tests/api/amadus.oauth2.spec.ts::Test Generate Access Token": [
+    "p",
+    816
+   ],
+   "chromium::src/tests/api/opencart.api.schema.spec.ts::GET user schema validation": [
+    "p",
+    1988
+   ],
+   "chromium::src/tests/api/opencart.api.schema.spec.ts::GET users schema validation": [
+    "p",
+    1505
+   ],
+   "chromium::src/tests/api/users.api.sep.spec.ts::Running User APIs › @smoke Verify GET call": [
+    "p",
+    1629
+   ],
+   "chromium::src/tests/api/users.api.sep.spec.ts::Running User APIs › @smoke Verify POST call": [
+    "p",
+    971
+   ],
+   "chromium::src/tests/api/users.api.sep.spec.ts::Running User APIs › @smoke Verify PUT call": [
+    "p",
+    1448
+   ],
+   "chromium::src/tests/api/users.api.sep.spec.ts::Running User APIs › @smoke Verify DELETE call": [
+    "p",
+    1297
+   ],
+   "chromium::src/tests/homepage.spec.ts::Home Page Title Test": [
+    "p",
+    11478
+   ],
+   "chromium::src/tests/homepage.spec.ts::Logout Link Exist Test": [
+    "p",
+    11338
+   ],
+   "chromium::src/tests/homepage.spec.ts::Homepage headings Test": [
+    "p",
+    11905
+   ],
+   "chromium::src/tests/homepagefix.spec.ts::@sanity Home Page Title Test": [
+    "p",
+    10577
+   ],
+   "chromium::src/tests/homepagefix.spec.ts::Logout Link Exist Test": [
+    "p",
+    13757
+   ],
+   "chromium::src/tests/homepagefix.spec.ts::@sanity Homepage headings Test": [
+    "f",
+    9936
+   ],
+   "chromium::src/tests/intercept.spec.ts::intercept and log requests": [
+    "p",
+    8550
+   ],
+   "chromium::src/tests/intercept.spec.ts::Intercept Mock data": [
+    "s",
+    0
+   ],
+   "chromium::src/tests/loginpage.spec.ts::Login Page Title Test": [
+    "p",
+    5062
+   ],
+   "chromium::src/tests/loginpage.spec.ts::Forgot password link exist test": [
+    "p",
+    4185
+   ],
+   "chromium::src/tests/loginpage.spec.ts::User is able to login with valid credentials Test": [
+    "p",
+    7061
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Login Page Title Test": [
+    "f",
+    1920
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Forgot password link exist test": [
+    "p",
+    4146
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::@sanity User is able to login with valid credentials Test": [
+    "p",
+    6200
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Login with wrong credentials with data driven approach": [
+    "p",
+    6095
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Invalid Login Test with -  invalid@gmail.com - Test1234": [
+    "p",
+    5128
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Invalid Login Test with -   - Test1234": [
+    "f",
+    3872
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Invalid Login Test with -  nityaranjan190592@gmail.com - Test1234": [
+    "p",
+    3959
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Invalid Login Test from Excel data -  invalid@gmail.com - test1234": [
+    "p",
+    3611
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Invalid Login Test from Excel data -   - test1234": [
+    "p",
+    3952
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Invalid Login Test from Excel data -  invalid@gmail.com - ": [
+    "p",
+    3547
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Invalid Login :  invalid@gmail.com - Test1234": [
+    "p",
+    3548
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Invalid Login :   - Test1234": [
+    "p",
+    2254
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Invalid Login :  invalid@gmail.com - ": [
+    "p",
+    3096
+   ],
+   "chromium::src/tests/multiUserTest.spec.ts::Test Multi User Test": [
+    "p",
+    2868
+   ],
+   "chromium::src/tests/productInfoPage.spec.ts::Verify Logo Should be Visible": [
+    "p",
+    3087
+   ],
+   "chromium::src/tests/productInfoPage.spec.ts::Verify Product Images count test": [
+    "p",
+    5898
+   ],
+   "chromium::src/tests/productInfoPage.spec.ts::Verify product info": [
+    "p",
+    5573
+   ],
+   "chromium::src/tests/search.spec.ts::Verify Search results count of - macbook  MacBook Pro": [
+    "p",
+    3675
+   ],
+   "chromium::src/tests/search.spec.ts::Verify Search results count of - macbook  MacBook Air": [
+    "p",
+    4986
+   ],
+   "chromium::src/tests/search.spec.ts::Verify Search results count of - imac  iMac": [
+    "p",
+    5161
+   ],
+   "chromium::src/tests/search.spec.ts::@sanity Verify User Is Able To Land On Product Page of  - MacBook Pro": [
+    "p",
+    5215
+   ],
+   "chromium::src/tests/search.spec.ts::@sanity Verify User Is Able To Land On Product Page of  - MacBook Air": [
+    "p",
+    5959
+   ],
+   "chromium::src/tests/search.spec.ts::@sanity Verify User Is Able To Land On Product Page of  - iMac": [
+    "p",
+    5386
+   ]
+  }
+ },
+ {
+  "time": 1795707603047,
+  "duration": 23031.154,
+  "passed": 38,
+  "failed": 2,
+  "flaky": 0,
+  "skipped": 1,
+  "total": 41,
+  "tests": {
+   "chromium::src/tests/api/amadus.oauth2.spec.ts::Test Generate Access Token": [
+    "p",
+    832
+   ],
+   "chromium::src/tests/api/opencart.api.schema.spec.ts::GET user schema validation": [
+    "p",
+    899
+   ],
+   "chromium::src/tests/api/opencart.api.schema.spec.ts::GET users schema validation": [
+    "p",
+    584
+   ],
+   "chromium::src/tests/api/users.api.sep.spec.ts::Running User APIs › @smoke Verify GET call": [
+    "p",
+    626
+   ],
+   "chromium::src/tests/api/users.api.sep.spec.ts::Running User APIs › @smoke Verify POST call": [
+    "p",
+    529
+   ],
+   "chromium::src/tests/api/users.api.sep.spec.ts::Running User APIs › @smoke Verify PUT call": [
+    "p",
+    562
+   ],
+   "chromium::src/tests/api/users.api.sep.spec.ts::Running User APIs › @smoke Verify DELETE call": [
+    "p",
+    665
+   ],
+   "chromium::src/tests/homepage.spec.ts::Home Page Title Test": [
+    "p",
+    5482
+   ],
+   "chromium::src/tests/homepage.spec.ts::Logout Link Exist Test": [
+    "p",
+    5792
+   ],
+   "chromium::src/tests/homepage.spec.ts::Homepage headings Test": [
+    "p",
+    5174
+   ],
+   "chromium::src/tests/homepagefix.spec.ts::@sanity Home Page Title Test": [
+    "p",
+    5000
+   ],
+   "chromium::src/tests/homepagefix.spec.ts::Logout Link Exist Test": [
+    "p",
+    5982
+   ],
+   "chromium::src/tests/homepagefix.spec.ts::@sanity Homepage headings Test": [
+    "p",
+    5410
+   ],
+   "chromium::src/tests/intercept.spec.ts::intercept and log requests": [
+    "p",
+    3823
+   ],
+   "chromium::src/tests/intercept.spec.ts::Intercept Mock data": [
+    "s",
+    0
+   ],
+   "chromium::src/tests/loginpage.spec.ts::Login Page Title Test": [
+    "p",
+    3502
+   ],
+   "chromium::src/tests/loginpage.spec.ts::Forgot password link exist test": [
+    "p",
+    1962
+   ],
+   "chromium::src/tests/loginpage.spec.ts::User is able to login with valid credentials Test": [
+    "p",
+    1898
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Login Page Title Test": [
+    "f",
+    1210
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Forgot password link exist test": [
+    "p",
+    1310
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::@sanity User is able to login with valid credentials Test": [
+    "p",
+    2145
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Login with wrong credentials with data driven approach": [
+    "p",
+    4354
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Invalid Login Test with -  invalid@gmail.com - Test1234": [
+    "p",
+    1744
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Invalid Login Test with -   - Test1234": [
+    "p",
+    1765
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Invalid Login Test with -  nityaranjan190592@gmail.com - Test1234": [
+    "p",
+    2496
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Invalid Login Test from Excel data -  invalid@gmail.com - test1234": [
+    "p",
+    2200
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Invalid Login Test from Excel data -   - test1234": [
+    "p",
+    1714
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Invalid Login Test from Excel data -  invalid@gmail.com - ": [
+    "p",
+    2279
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Invalid Login :  invalid@gmail.com - Test1234": [
+    "p",
+    2572
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Invalid Login :   - Test1234": [
+    "p",
+    2743
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Invalid Login :  invalid@gmail.com - ": [
+    "p",
+    2118
+   ],
+   "chromium::src/tests/multiUserTest.spec.ts::Test Multi User Test": [
+    "p",
+    2841
+   ],
+   "chromium::src/tests/productInfoPage.spec.ts::Verify Logo Should be Visible": [
+    "p",
+    1989
+   ],
+   "chromium::src/tests/productInfoPage.spec.ts::Verify Product Images count test": [
+    "p",
+    4067
+   ],
+   "chromium::src/tests/productInfoPage.spec.ts::Verify product info": [
+    "p",
+    5178
+   ],
+   "chromium::src/tests/search.spec.ts::Verify Search results count of - macbook  MacBook Pro": [
+    "p",
+    3849
+   ],
+   "chromium::src/tests/search.spec.ts::Verify Search results count of - macbook  MacBook Air": [
+    "p",
+    2361
+   ],
+   "chromium::src/tests/search.spec.ts::Verify Search results count of - imac  iMac": [
+    "f",
+    2526
+   ],
+   "chromium::src/tests/search.spec.ts::@sanity Verify User Is Able To Land On Product Page of  - MacBook Pro": [
+    "p",
+    3650
+   ],
+   "chromium::src/tests/search.spec.ts::@sanity Verify User Is Able To Land On Product Page of  - MacBook Air": [
+    "p",
+    4883
+   ],
+   "chromium::src/tests/search.spec.ts::@sanity Verify User Is Able To Land On Product Page of  - iMac": [
+    "p",
+    3310
+   ]
+  }
+ },
+ {
+  "time": 1795707753549,
+  "duration": 21249.449,
+  "passed": 37,
+  "failed": 3,
+  "flaky": 0,
+  "skipped": 1,
+  "total": 41,
+  "tests": {
+   "chromium::src/tests/api/amadus.oauth2.spec.ts::Test Generate Access Token": [
+    "p",
+    739
+   ],
+   "chromium::src/tests/api/opencart.api.schema.spec.ts::GET user schema validation": [
+    "p",
+    879
+   ],
+   "chromium::src/tests/api/opencart.api.schema.spec.ts::GET users schema validation": [
+    "p",
+    556
+   ],
+   "chromium::src/tests/api/users.api.sep.spec.ts::Running User APIs › @smoke Verify GET call": [
+    "p",
+    720
+   ],
+   "chromium::src/tests/api/users.api.sep.spec.ts::Running User APIs › @smoke Verify POST call": [
+    "p",
+    522
+   ],
+   "chromium::src/tests/api/users.api.sep.spec.ts::Running User APIs › @smoke Verify PUT call": [
+    "p",
+    406
+   ],
+   "chromium::src/tests/api/users.api.sep.spec.ts::Running User APIs › @smoke Verify DELETE call": [
+    "p",
+    469
+   ],
+   "chromium::src/tests/homepage.spec.ts::Home Page Title Test": [
+    "p",
+    2333
+   ],
+   "chromium::src/tests/homepage.spec.ts::Logout Link Exist Test": [
+    "p",
+    2218
+   ],
+   "chromium::src/tests/homepage.spec.ts::Homepage headings Test": [
+    "p",
+    2685
+   ],
+   "chromium::src/tests/homepagefix.spec.ts::@sanity Home Page Title Test": [
+    "p",
+    2873
+   ],
+   "chromium::src/tests/homepagefix.spec.ts::Logout Link Exist Test": [
+    "p",
+    2446
+   ],
+   "chromium::src/tests/homepagefix.spec.ts::@sanity Homepage headings Test": [
+    "p",
+    2489
+   ],
+   "chromium::src/tests/intercept.spec.ts::intercept and log requests": [
+    "p",
+    1784
+   ],
+   "chromium::src/tests/intercept.spec.ts::Intercept Mock data": [
+    "s",
+    0
+   ],
+   "chromium::src/tests/loginpage.spec.ts::Login Page Title Test": [
+    "p",
+    1255
+   ],
+   "chromium::src/tests/loginpage.spec.ts::Forgot password link exist test": [
+    "p",
+    1125
+   ],
+   "chromium::src/tests/loginpage.spec.ts::User is able to login with valid credentials Test": [
+    "p",
+    2126
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Login Page Title Test": [
+    "f",
+    1054
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Forgot password link exist test": [
+    "p",
+    1204
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::@sanity User is able to login with valid credentials Test": [
+    "f",
+    2649
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Login with wrong credentials with data driven approach": [
+    "f",
+    1612
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Invalid Login Test with -  invalid@gmail.com - Test1234": [
+    "p",
+    3380
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Invalid Login Test with -   - Test1234": [
+    "p",
+    2812
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Invalid Login Test with -  nityaranjan190592@gmail.com - Test1234": [
+    "p",
+    1818
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Invalid Login Test from Excel data -  invalid@gmail.com - test1234": [
+    "p",
+    2067
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Invalid Login Test from Excel data -   - test1234": [
+    "p",
+    1651
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Invalid Login Test from Excel data -  invalid@gmail.com - ": [
+    "p",
+    2443
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Invalid Login :  invalid@gmail.com - Test1234": [
+    "p",
+    2045
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Invalid Login :   - Test1234": [
+    "p",
+    2376
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Invalid Login :  invalid@gmail.com - ": [
+    "p",
+    1955
+   ],
+   "chromium::src/tests/multiUserTest.spec.ts::Test Multi User Test": [
+    "p",
+    3243
+   ],
+   "chromium::src/tests/productInfoPage.spec.ts::Verify Logo Should be Visible": [
+    "p",
+    1983
+   ],
+   "chromium::src/tests/productInfoPage.spec.ts::Verify Product Images count test": [
+    "p",
+    3784
+   ],
+   "chromium::src/tests/productInfoPage.spec.ts::Verify product info": [
+    "p",
+    4713
+   ],
+   "chromium::src/tests/search.spec.ts::Verify Search results count of - macbook  MacBook Pro": [
+    "p",
+    2724
+   ],
+   "chromium::src/tests/search.spec.ts::Verify Search results count of - macbook  MacBook Air": [
+    "p",
+    2718
+   ],
+   "chromium::src/tests/search.spec.ts::Verify Search results count of - imac  iMac": [
+    "p",
+    3426
+   ],
+   "chromium::src/tests/search.spec.ts::@sanity Verify User Is Able To Land On Product Page of  - MacBook Pro": [
+    "p",
+    3492
+   ],
+   "chromium::src/tests/search.spec.ts::@sanity Verify User Is Able To Land On Product Page of  - MacBook Air": [
+    "p",
+    3318
+   ],
+   "chromium::src/tests/search.spec.ts::@sanity Verify User Is Able To Land On Product Page of  - iMac": [
+    "p",
+    4023
+   ]
+  }
+ },
+ {
+  "time": 1795708582638,
+  "duration": 37029.688,
+  "passed": 38,
+  "failed": 2,
+  "flaky": 0,
+  "skipped": 1,
+  "total": 41,
+  "tests": {
+   "chromium::src/tests/api/amadus.oauth2.spec.ts::Test Generate Access Token": [
+    "p",
+    782
+   ],
+   "chromium::src/tests/api/opencart.api.schema.spec.ts::GET user schema validation": [
+    "p",
+    1814
+   ],
+   "chromium::src/tests/api/opencart.api.schema.spec.ts::GET users schema validation": [
+    "p",
+    1344
+   ],
+   "chromium::src/tests/api/users.api.sep.spec.ts::Running User APIs › @smoke Verify GET call": [
+    "p",
+    1311
+   ],
+   "chromium::src/tests/api/users.api.sep.spec.ts::Running User APIs › @smoke Verify POST call": [
+    "p",
+    675
+   ],
+   "chromium::src/tests/api/users.api.sep.spec.ts::Running User APIs › @smoke Verify PUT call": [
+    "p",
+    555
+   ],
+   "chromium::src/tests/api/users.api.sep.spec.ts::Running User APIs › @smoke Verify DELETE call": [
+    "p",
+    568
+   ],
+   "chromium::src/tests/homepage.spec.ts::Home Page Title Test": [
+    "p",
+    3862
+   ],
+   "chromium::src/tests/homepage.spec.ts::Logout Link Exist Test": [
+    "p",
+    3476
+   ],
+   "chromium::src/tests/homepage.spec.ts::Homepage headings Test": [
+    "p",
+    4324
+   ],
+   "chromium::src/tests/homepagefix.spec.ts::@sanity Home Page Title Test": [
+    "p",
+    3544
+   ],
+   "chromium::src/tests/homepagefix.spec.ts::Logout Link Exist Test": [
+    "p",
+    3729
+   ],
+   "chromium::src/tests/homepagefix.spec.ts::@sanity Homepage headings Test": [
+    "p",
+    3830
+   ],
+   "chromium::src/tests/intercept.spec.ts::intercept and log requests": [
+    "p",
+    3398
+   ],
+   "chromium::src/tests/intercept.spec.ts::Intercept Mock data": [
+    "s",
+    0
+   ],
+   "chromium::src/tests/loginpage.spec.ts::Login Page Title Test": [
+    "p",
+    2831
+   ],
+   "chromium::src/tests/loginpage.spec.ts::Forgot password link exist test": [
+    "p",
+    4743
+   ],
+   "chromium::src/tests/loginpage.spec.ts::User is able to login with valid credentials Test": [
+    "p",
+    2987
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Login Page Title Test": [
+    "f",
+    1986
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Forgot password link exist test": [
+    "p",
+    1801
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::@sanity User is able to login with valid credentials Test": [
+    "p",
+    4351
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Login with wrong credentials with data driven approach": [
+    "f",
+    3373
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Invalid Login Test with -  invalid@gmail.com - Test1234": [
+    "p",
+    3682
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Invalid Login Test with -   - Test1234": [
+    "p",
+    3076
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Invalid Login Test with -  nityaranjan190592@gmail.com - Test1234": [
+    "p",
+    3674
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Invalid Login Test from Excel data -  invalid@gmail.com - test1234": [
+    "p",
+    2953
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Invalid Login Test from Excel data -   - test1234": [
+    "p",
+    2987
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Invalid Login Test from Excel data -  invalid@gmail.com - ": [
+    "p",
+    8254
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Invalid Login :  invalid@gmail.com - Test1234": [
+    "p",
+    5438
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Invalid Login :   - Test1234": [
+    "p",
+    5538
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Invalid Login :  invalid@gmail.com - ": [
+    "p",
+    5687
+   ],
+   "chromium::src/tests/multiUserTest.spec.ts::Test Multi User Test": [
+    "p",
+    7109
+   ],
+   "chromium::src/tests/productInfoPage.spec.ts::Verify Logo Should be Visible": [
+    "p",
+    9208
+   ],
+   "chromium::src/tests/productInfoPage.spec.ts::Verify Product Images count test": [
+    "p",
+    11409
+   ],
+   "chromium::src/tests/productInfoPage.spec.ts::Verify product info": [
+    "p",
+    12138
+   ],
+   "chromium::src/tests/search.spec.ts::Verify Search results count of - macbook  MacBook Pro": [
+    "p",
+    9307
+   ],
+   "chromium::src/tests/search.spec.ts::Verify Search results count of - macbook  MacBook Air": [
+    "p",
+    8936
+   ],
+   "chromium::src/tests/search.spec.ts::Verify Search results count of - imac  iMac": [
+    "p",
+    8252
+   ],
+   "chromium::src/tests/search.spec.ts::@sanity Verify User Is Able To Land On Product Page of  - MacBook Pro": [
+    "p",
+    8469
+   ],
+   "chromium::src/tests/search.spec.ts::@sanity Verify User Is Able To Land On Product Page of  - MacBook Air": [
+    "p",
+    8022
+   ],
+   "chromium::src/tests/search.spec.ts::@sanity Verify User Is Able To Land On Product Page of  - iMac": [
+    "p",
+    8328
+   ]
+  }
+ },
+ {
+  "time": 1795709026603,
+  "duration": 36796.027,
+  "passed": 39,
+  "failed": 1,
+  "flaky": 0,
+  "skipped": 1,
+  "total": 41,
+  "tests": {
+   "chromium::src/tests/api/amadus.oauth2.spec.ts::Test Generate Access Token": [
+    "p",
+    727
+   ],
+   "chromium::src/tests/api/opencart.api.schema.spec.ts::GET user schema validation": [
+    "p",
+    818
+   ],
+   "chromium::src/tests/api/opencart.api.schema.spec.ts::GET users schema validation": [
+    "p",
+    513
+   ],
+   "chromium::src/tests/api/users.api.sep.spec.ts::Running User APIs › @smoke Verify GET call": [
+    "p",
+    471
+   ],
+   "chromium::src/tests/api/users.api.sep.spec.ts::Running User APIs › @smoke Verify POST call": [
+    "p",
+    491
+   ],
+   "chromium::src/tests/api/users.api.sep.spec.ts::Running User APIs › @smoke Verify PUT call": [
+    "p",
+    1321
+   ],
+   "chromium::src/tests/api/users.api.sep.spec.ts::Running User APIs › @smoke Verify DELETE call": [
+    "p",
+    1257
+   ],
+   "chromium::src/tests/homepage.spec.ts::Home Page Title Test": [
+    "p",
+    3268
+   ],
+   "chromium::src/tests/homepage.spec.ts::Logout Link Exist Test": [
+    "p",
+    3094
+   ],
+   "chromium::src/tests/homepage.spec.ts::Homepage headings Test": [
+    "p",
+    4033
+   ],
+   "chromium::src/tests/homepagefix.spec.ts::@sanity Home Page Title Test": [
+    "p",
+    3647
+   ],
+   "chromium::src/tests/homepagefix.spec.ts::Logout Link Exist Test": [
+    "p",
+    4818
+   ],
+   "chromium::src/tests/homepagefix.spec.ts::@sanity Homepage headings Test": [
+    "p",
+    4247
+   ],
+   "chromium::src/tests/intercept.spec.ts::intercept and log requests": [
+    "p",
+    3816
+   ],
+   "chromium::src/tests/intercept.spec.ts::Intercept Mock data": [
+    "s",
+    0
+   ],
+   "chromium::src/tests/loginpage.spec.ts::Login Page Title Test": [
+    "p",
+    2709
+   ],
+   "chromium::src/tests/loginpage.spec.ts::Forgot password link exist test": [
+    "p",
+    2147
+   ],
+   "chromium::src/tests/loginpage.spec.ts::User is able to login with valid credentials Test": [
+    "p",
+    3981
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Login Page Title Test": [
+    "f",
+    3335
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Forgot password link exist test": [
+    "p",
+    1834
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::@sanity User is able to login with valid credentials Test": [
+    "p",
+    3298
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Login with wrong credentials with data driven approach": [
+    "p",
+    8465
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Invalid Login Test with -  invalid@gmail.com - Test1234": [
+    "p",
+    2741
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Invalid Login Test with -   - Test1234": [
+    "p",
+    3265
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Invalid Login Test with -  nityaranjan190592@gmail.com - Test1234": [
+    "p",
+    4990
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Invalid Login Test from Excel data -  invalid@gmail.com - test1234": [
+    "p",
+    3032
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Invalid Login Test from Excel data -   - test1234": [
+    "p",
+    20455
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Invalid Login Test from Excel data -  invalid@gmail.com - ": [
+    "p",
+    6098
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Invalid Login :  invalid@gmail.com - Test1234": [
+    "p",
+    4686
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Invalid Login :   - Test1234": [
+    "p",
+    5655
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Invalid Login :  invalid@gmail.com - ": [
+    "p",
+    6616
+   ],
+   "chromium::src/tests/multiUserTest.spec.ts::Test Multi User Test": [
+    "p",
+    10115
+   ],
+   "chromium::src/tests/productInfoPage.spec.ts::Verify Logo Should be Visible": [
+    "p",
+    8307
+   ],
+   "chromium::src/tests/productInfoPage.spec.ts::Verify Product Images count test": [
+    "p",
+    9871
+   ],
+   "chromium::src/tests/productInfoPage.spec.ts::Verify product info": [
+    "p",
+    10462
+   ],
+   "chromium::src/tests/search.spec.ts::Verify Search results count of - macbook  MacBook Pro": [
+    "p",
+    9356
+   ],
+   "chromium::src/tests/search.spec.ts::Verify Search results count of - macbook  MacBook Air": [
+    "p",
+    8627
+   ],
+   "chromium::src/tests/search.spec.ts::Verify Search results count of - imac  iMac": [
+    "p",
+    6769
+   ],
+   "chromium::src/tests/search.spec.ts::@sanity Verify User Is Able To Land On Product Page of  - MacBook Pro": [
+    "p",
+    7280
+   ],
+   "chromium::src/tests/search.spec.ts::@sanity Verify User Is Able To Land On Product Page of  - MacBook Air": [
+    "p",
+    7562
+   ],
+   "chromium::src/tests/search.spec.ts::@sanity Verify User Is Able To Land On Product Page of  - iMac": [
+    "p",
+    4873
+   ]
+  }
+ },
+ {
+  "time": 1795709406535,
+  "duration": 21208.852,
+  "passed": 39,
+  "failed": 1,
+  "flaky": 0,
+  "skipped": 1,
+  "total": 41,
+  "tests": {
+   "chromium::src/tests/api/amadus.oauth2.spec.ts::Test Generate Access Token": [
+    "p",
+    701
+   ],
+   "chromium::src/tests/api/opencart.api.schema.spec.ts::GET user schema validation": [
+    "p",
+    807
+   ],
+   "chromium::src/tests/api/opencart.api.schema.spec.ts::GET users schema validation": [
+    "p",
+    572
+   ],
+   "chromium::src/tests/api/users.api.sep.spec.ts::Running User APIs › @smoke Verify GET call": [
+    "p",
+    606
+   ],
+   "chromium::src/tests/api/users.api.sep.spec.ts::Running User APIs › @smoke Verify POST call": [
+    "p",
+    609
+   ],
+   "chromium::src/tests/api/users.api.sep.spec.ts::Running User APIs › @smoke Verify PUT call": [
+    "p",
+    490
+   ],
+   "chromium::src/tests/api/users.api.sep.spec.ts::Running User APIs › @smoke Verify DELETE call": [
+    "p",
+    561
+   ],
+   "chromium::src/tests/homepage.spec.ts::Home Page Title Test": [
+    "p",
+    5148
+   ],
+   "chromium::src/tests/homepage.spec.ts::Logout Link Exist Test": [
+    "p",
+    4466
+   ],
+   "chromium::src/tests/homepage.spec.ts::Homepage headings Test": [
+    "p",
+    4977
+   ],
+   "chromium::src/tests/homepagefix.spec.ts::@sanity Home Page Title Test": [
+    "p",
+    4056
+   ],
+   "chromium::src/tests/homepagefix.spec.ts::Logout Link Exist Test": [
+    "p",
+    3395
+   ],
+   "chromium::src/tests/homepagefix.spec.ts::@sanity Homepage headings Test": [
+    "p",
+    4323
+   ],
+   "chromium::src/tests/intercept.spec.ts::intercept and log requests": [
+    "p",
+    3212
+   ],
+   "chromium::src/tests/intercept.spec.ts::Intercept Mock data": [
+    "s",
+    0
+   ],
+   "chromium::src/tests/loginpage.spec.ts::Login Page Title Test": [
+    "p",
+    3066
+   ],
+   "chromium::src/tests/loginpage.spec.ts::Forgot password link exist test": [
+    "p",
+    1224
+   ],
+   "chromium::src/tests/loginpage.spec.ts::User is able to login with valid credentials Test": [
+    "p",
+    1959
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Login Page Title Test": [
+    "f",
+    1191
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Forgot password link exist test": [
+    "p",
+    1086
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::@sanity User is able to login with valid credentials Test": [
+    "p",
+    2091
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Login with wrong credentials with data driven approach": [
+    "p",
+    3061
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Invalid Login Test with -  invalid@gmail.com - Test1234": [
+    "p",
+    2012
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Invalid Login Test with -   - Test1234": [
+    "p",
+    1667
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Invalid Login Test with -  nityaranjan190592@gmail.com - Test1234": [
+    "p",
+    2055
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Invalid Login Test from Excel data -  invalid@gmail.com - test1234": [
+    "p",
+    1868
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Invalid Login Test from Excel data -   - test1234": [
+    "p",
+    1837
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Invalid Login Test from Excel data -  invalid@gmail.com - ": [
+    "p",
+    1895
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Invalid Login :  invalid@gmail.com - Test1234": [
+    "p",
+    1719
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Invalid Login :   - Test1234": [
+    "p",
+    1799
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Invalid Login :  invalid@gmail.com - ": [
+    "p",
+    1832
+   ],
+   "chromium::src/tests/multiUserTest.spec.ts::Test Multi User Test": [
+    "p",
+    3232
+   ],
+   "chromium::src/tests/productInfoPage.spec.ts::Verify Logo Should be Visible": [
+    "p",
+    2343
+   ],
+   "chromium::src/tests/productInfoPage.spec.ts::Verify Product Images count test": [
+    "p",
+    3787
+   ],
+   "chromium::src/tests/productInfoPage.spec.ts::Verify product info": [
+    "p",
+    4071
+   ],
+   "chromium::src/tests/search.spec.ts::Verify Search results count of - macbook  MacBook Pro": [
+    "p",
+    2955
+   ],
+   "chromium::src/tests/search.spec.ts::Verify Search results count of - macbook  MacBook Air": [
+    "p",
+    4259
+   ],
+   "chromium::src/tests/search.spec.ts::Verify Search results count of - imac  iMac": [
+    "p",
+    3067
+   ],
+   "chromium::src/tests/search.spec.ts::@sanity Verify User Is Able To Land On Product Page of  - MacBook Pro": [
+    "p",
+    3797
+   ],
+   "chromium::src/tests/search.spec.ts::@sanity Verify User Is Able To Land On Product Page of  - MacBook Air": [
+    "p",
+    3817
+   ],
+   "chromium::src/tests/search.spec.ts::@sanity Verify User Is Able To Land On Product Page of  - iMac": [
+    "p",
+    3636
+   ]
+  }
+ }
+]

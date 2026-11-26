@@ -1,3 +1,4 @@
+import { meta,testData as suppliedData } from "reporting-labs";
 import { test,  expect } from "../fixtures/pageFixtures";
 import { CsvHelper } from "../utils/CsvHelper";
 import { ExcelHelper } from "../utils/ExcelHelper";
@@ -8,9 +9,10 @@ test.beforeEach(async ({loginPage})=>{
 })
 
 test("Login Page Title Test", async ({loginPage})=>{
+    meta({priority:"P1",severity:"major",epic:"JIRA-2526",owner:"Nitya"});
     let title = await loginPage.getPageTitle();
     console.log(`Login Page Title is : ${title}`);
-    expect(title).toBe("Account Login");
+    expect(title).toBe("Account Loginnn");
 })
 
 test("Forgot password link exist test", async ({loginPage})=>{
@@ -37,6 +39,7 @@ test("Login with wrong credentials with data driven approach", async({loginPage,
 let testData = CsvHelper.readCsv('src/data/loginData.csv');
 for(let row of testData){
     test(`Invalid Login Test with -  ${row.username} - ${row.password}`, async ({loginPage})=>{
+        await suppliedData(testData, "Login Data");
         await loginPage.doLogin(row.username!,row.password!);
         expect(await loginPage.isErrorMessageDisplayed()).toBeTruthy();
     })

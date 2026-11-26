@@ -1,6 +1,7 @@
 import { defineConfig, devices } from '@playwright/test';
 import * as os from 'node:os';
 import dotenv from "dotenv";
+import reportingLabs from './reporting-labs.config';
 
 const ENV = process.env.ENV || "qa";
 console.log(`Testcases are Running On Environment - ${ENV}`);
@@ -22,6 +23,7 @@ export default defineConfig({
 
   reporter: process.env.CI
     ? [
+      ['list'], ['reporting-labs', reportingLabs],
       ["blob"],
       ["html",{ outputFolder: "reports/html-report", open: "never" }],
       ["allure-playwright", { outputFolder: "allure-results", suiteTitle: true, environmentInfo: {
@@ -34,6 +36,7 @@ export default defineConfig({
         } }],
     ]
     : [
+      ['list'], ['reporting-labs', reportingLabs],
       ["blob", { outputDir: "blob-report" }],
       ["list"],
       ["html", { outputFolder: "reports/html-report", open: "never" }],

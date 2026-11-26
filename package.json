@@ -23,7 +23,7 @@
     "allure:open": "npx allure open allure-report",
     "allure:report": "npm run allure:history && npm run allure:generate && npm run allure:open",
     "allure:clean": "rimraf allure-results allure-report",
-    "clean:allreports": "rimraf allure-results allure-report all-blob-reports blob-report blob1-report blob2-report blob3-report blob4-report reports test-results"
+    "clean:allreports": "rimraf reporting-labs allure-results allure-report all-blob-reports blob-report blob1-report blob2-report blob3-report blob4-report reports test-results"
   },
   "keywords": [
     "playwright",
@@ -60,6 +60,7 @@
     "ajv": "^8.20.0",
     "csv-parse": "^7.0.3",
     "dotenv": "^18.0.9",
+    "reporting-labs": "^0.6.24",
     "xlsx": "^0.18.5"
   }
 }
