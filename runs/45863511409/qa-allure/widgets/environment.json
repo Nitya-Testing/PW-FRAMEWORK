@@ -1,0 +1,1 @@
+[{"values":["QA"],"name":"Environment"},{"values":["Chromium"],"name":"Browser"},{"values":["linux"],"name":"OS"},{"values":["7.0.0-1018-aws"],"name":"OS_Version"},{"values":["v24.22.3"],"name":"Node_Version"},{"values":["Playwright"],"name":"Framework"}]
