@@ -20,6 +20,13 @@ export class LoginPage extends BasePage{
 
 
     async goToLoginPage():Promise<void>{
+    const response = await this.page.goto('opencart/index.php?route=account/login');
+
+    if (!response?.ok()) {
+        throw new Error(
+            `Login page navigation failed: HTTP ${response?.status() ?? 'no response'}`
+        );
+    }
         await this.page.goto('opencart/index.php?route=account/login');
     }
     async getLoginPageTitle():Promise<string>{

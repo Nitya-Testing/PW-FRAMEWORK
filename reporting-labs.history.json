@@ -1223,5 +1223,43 @@
     3636
    ]
   }
+ },
+ {
+  "time": 1795714617048,
+  "duration": 8596.845,
+  "passed": 3,
+  "failed": 0,
+  "flaky": 0,
+  "skipped": 0,
+  "total": 3,
+  "tests": {
+   "chromium::src/tests/loginpagefix.spec.ts::Invalid Login Test with -  invalid@gmail.com - Test1234": [
+    "p",
+    5055
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Invalid Login Test with -   - Test1234": [
+    "p",
+    4420
+   ],
+   "chromium::src/tests/loginpagefix.spec.ts::Invalid Login Test with -  nityaranjan190592@gmail.com - Test1234": [
+    "p",
+    5502
+   ]
+  }
+ },
+ {
+  "time": 1795714783296,
+  "duration": 3319.6670000000004,
+  "passed": 1,
+  "failed": 0,
+  "flaky": 0,
+  "skipped": 0,
+  "total": 1,
+  "tests": {
+   "chromium::src/tests/productInfoPage.spec.ts::Verify Logo Should be Visible": [
+    "p",
+    1963
+   ]
+  }
  }
 ]
